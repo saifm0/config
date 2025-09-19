@@ -1,0 +1,48 @@
+[2m2025-08-19T11:46:40.248261Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to execute 'zebar'.
+
+Error: The operation was canceled by the user. (0x800704C7)
+[2m2025-08-19T11:47:44.707616Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to execute 'zebar'.
+
+Error: The operation was canceled by the user. (0x800704C7)
+[2m2025-08-19T19:21:26.589738Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-08-20T20:08:36.286564Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to execute 'Start-Process firefox'.
+
+Error: The operation was canceled by the user. (0x800704C7)
+[2m2025-08-21T18:39:30.190380Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to execute 'spotify'.
+
+Error: The operation was canceled by the user. (0x800704C7)
+[2m2025-08-21T19:18:09.504515Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Command doesn't have an ending `"`: '"%APPDATA%\\Spotify\\Spotify.exe"'.
+[2m2025-08-23T16:07:56.810466Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-08-23T16:09:28.941331Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-08-27T03:23:14.229244Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Command doesn't have an ending `"`: '"C:\Users\PC\scoop\apps\emacs\current\bin\emacs.exe"'.
+[2m2025-08-27T03:23:23.362426Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Command doesn't have an ending `"`: '"C:\Users\PC\scoop\apps\emacs\current\bin\emacs.exe"'.
+[2m2025-08-27T03:29:27.789474Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Command doesn't have an ending `"`: '"C:\\Program Files\\Mozilla Firefox\\firefox.exe" --new-window https://chatgpt.com --kiosk'.
+[2m2025-08-27T03:30:36.158096Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Command doesn't have an ending `"`: '"C:\\Program Files\\Mozilla Firefox\\firefox.exe" --new-window https://chatgpt.com --kiosk'.
+[2m2025-08-27T03:35:55.118091Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command 'C:\Progra~1\Microsoft\Edge\Application\msedge.exe --app=https://chatgpt.com/'.
+[2m2025-08-27T03:36:26.930133Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command 'C:\Progra~1\Microsoft\Edge\Application\msedge.exe --app=https://chatgpt.com/'.
+[2m2025-08-27T04:57:39.372827Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24]: duplicate field `bindings` at line 260 column 5
+[2m2025-08-27T07:05:04.830340Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command 'C:\Users\PC\gemini-win32-x64'.
+[2m2025-08-30T09:43:29.352337Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-08-30T09:43:35.512147Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-09-01T06:52:59.071911Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-01T06:52:59.072382Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-01T06:52:59.072430Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-02T20:34:12.984954Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Program path is not valid for command 'C:\Users\PC\scoop\apps\emacs\current\bin\runemacs.exe'.
+[2m2025-09-02T20:35:51.822713Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[57].commands: unrecognized subcommand
+ at line 339 column 15
+[2m2025-09-04T11:27:48.643270Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[54]: duplicate field `bindings` at line 332 column 5
+[2m2025-09-05T20:33:22.302072Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-09-06T17:53:55.949530Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-09-08T13:36:21.602893Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-09-08T16:12:00.723794Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-09-09T14:25:50.687513Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-09-09T23:57:08.107974Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2025-09-10T15:08:35.532438Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-09-11T17:18:39.758679Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-09-11T17:19:40.643702Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No Workspace
+[2m2025-09-13T18:59:03.753656Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-09-14T22:43:03.026397Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-09-14T22:43:19.468993Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No Workspace
+[2m2025-09-16T01:44:23.802229Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-09-18T05:47:05.749010Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.
+[2m2025-09-19T06:41:21.225532Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No displayed workspace.

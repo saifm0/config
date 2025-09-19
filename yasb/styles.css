@@ -1,0 +1,210 @@
+/* yasb — gruvbox dark / modern glass pills */
+:root{
+  /* gruvbox accents */
+  --mauve:#d3869b; --red:#cc241d; --yellow:#d79921; --blue:#458588;
+  --lavender:#b16286; --aqua:#689d6a; --orange:#d65d0e; --green:#98971a;
+
+  /* gruvbox fg */
+  --text:#ebdbb2; --subtext1:#d5c4a1; --subtext0:#bdae93;
+  --overlay2:#a89984; --overlay1:#928374; --overlay0:#7c6f64;
+
+  /* gruvbox surfaces/bg */
+  --surface2:#665c54; --surface1:#504945; --surface0:#3c3836;
+  --base:#282828; --crust:rgba(40,40,40,.82);
+
+  /* alpha helpers */
+  --glass-0: rgba(60,56,54,1);   /* surface0 @ 55% */
+  --glass-1: rgba(80,73,69,1);   /* surface1 @ 35% */
+  --stroke:  rgba(124,111,100,.35);/* overlay1 @ 35% */
+  --stroke-hi: rgba(214,93,14,.45);/* orange @ 45% */
+}
+
+* {
+  font-family: "JetBrainsMono NFP", ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 450;
+  color: var(--text);
+  letter-spacing: .1px;
+  margin: 0; padding: 0;
+}
+
+.yasb-bar {
+  background: transparent;
+  border-radius: 12px;
+  border: 0;
+  box-shadow:false;
+  /* if your acrylic is off, this still helps a bit */
+  backdrop-filter: saturate(120%) blur(14px);
+}
+
+/* tooltip / context-menu — subtle, legible */
+.tooltip {
+  background: var(--glass-0);
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  color: var(--subtext0);
+  padding: 8px 10px;
+  font: 600 12.5px "0xProto Nerd Font Mono", ui-sans-serif;
+}
+
+.context-menu,
+.context-menu .menu-checkbox {
+  background: var(--base);
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  padding: 6px 4px;
+  font: 500 12px "0xProto Nerd Font Mono", ui-sans-serif;
+}
+.context-menu::item,
+.context-menu .menu-checkbox {
+  padding: 8px 12px; margin: 2px 6px; border-radius: 8px;
+}
+.context-menu::item:selected,
+.context-menu .menu-checkbox:hover { background: var(--glass-1); color: var(--subtext1); }
+.context-menu::separator { height:1px; background: var(--surface2); margin:6px 8px; }
+.context-menu::item:disabled { color: var(--overlay1); opacity:.7; }
+
+/* base widget pill */
+.widget {
+  margin: 0 6px;
+  padding: 0 20px;
+  height: 28px;
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(60,56,54,.99);
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.02) inset, 0 1px 10px rgba(0,0,0,.12);
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.widget:hover { background: var(--glass-1); border-color: var(--overlay1); }
+
+.icon { font-size: 16px; line-height: 1; }
+.widget .label { padding: 0 2px; }
+
+/* workspaces — numeric, clean, with dot indicator for populated */
+.glazewm-workspaces {
+  margin: 3px 0 3px 6px;
+  padding: 2px 6px;
+  background: var(--glass-0);
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+}
+.glazewm-workspaces .offline-status {
+  color: var(--surface2);
+  font-size: 12px; font-weight: 700; padding-left: 6px;
+}
+.glazewm-workspaces .ws-btn {
+  position: relative;
+  border: 0; background: transparent;
+  margin: 0 2px; padding: 0 8px;
+  height: 24px; min-width: 20px;
+  border-radius: 12px;
+  color: var(--overlay1);
+  font-size: 13px; font-weight: 550;
+  transition: background .12s ease, color .12s ease, border-color .12s ease;
+}
+.glazewm-workspaces .ws-btn:hover { color: var(--subtext1); background: var(--glass-1); }
+.glazewm-workspaces .ws-btn.populated::before {
+  content:""; display:inline-block; width:6px; height:6px; border-radius:50%;
+  background: var(--overlay1); margin-right:6px; transform: translateY(-1px);
+}
+.glazewm-workspaces .ws-btn.active_empty,
+.glazewm-workspaces .ws-btn.active_populated {
+  color: var(--orange);
+  background: rgba(214,93,14,.18);
+  border: 1px solid var(--green);
+  box-shadow: 0 0 0 1px rgba(214,93,14,.08) inset;
+}
+.glazewm-workspaces .ws-btn.active_populated::before { background: var(--green); }
+
+/* workspaces: white if populated, grey if empty */
+.glazewm-workspaces .ws-btn {
+  color: var(--overlay1); /* empty = grey */
+}
+
+/* populated (has windows) = white */
+.glazewm-workspaces .ws-btn.populated {
+  color: var(--text);
+}
+
+/* keep hover consistent for populated */
+.glazewm-workspaces .ws-btn.populated:hover {
+  color: var(--text);
+}
+
+/* make the dot follow the text color */
+.glazewm-workspaces .ws-btn.populated::before {
+  background: currentColor; /* replaces the old var(--overlay1) */
+}
+
+/* apps */
+.apps-widget .label { font-size: 14px; color: var(--subtext0); }
+.apps-widget .label:hover { color: var(--text); }
+
+/* power menu — card grid */
+.power-menu-widget .label { color: var(--red); font-size: 13px; }
+.power-menu-popup { background: transparent; }
+.power-menu-popup .button {
+  width: 180px; height: 220px; margin: 0;
+  background: var(--crust);
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.28);
+}
+.power-menu-popup .button.hover {
+  background: var(--base);
+  border-color: var(--overlay1);
+}
+.power-menu-popup .button .icon { font-size: 60px; padding-top: 28px; color: var(--surface2); }
+.power-menu-popup .button .label { margin: 8px 0 0; font-size: 15px; font-weight: 600; color: var(--overlay2); }
+.power-menu-popup .button.cancel { height: 34px; border-radius: 8px; }
+.power-menu-popup .button.cancel .label { color: var(--red); }
+
+/* tiny meta */
+.uptime { font-size: 13px; margin-bottom: 8px; color: var(--surface2); font-weight: 700; }
+
+/* mic / volume / weather accents */
+.microphone-widget .icon { font-size: 18px; color: var(--aqua); }
+.volume-widget .icon     { font-size: 17px; color: var(--orange); margin-right: 2px; }
+.weather-widget .icon    { font-size: 18px; color: var(--yellow); margin-right: 2px; }
+
+/* media — compact controls */
+.media-widget { padding: 0 6px; }
+.media-widget .label { color: var(--subtext1); font-size: 12px; padding-right: 4px; }
+.media-widget .btn {
+  color: var(--overlay1);
+  margin: 0 2px; padding: 0 2px;
+  font-family: "JetBrainsMono NFP", ui-monospace, monospace;
+  font-weight: 500; font-size: 18px;
+}
+.media-widget .btn.play { font-size: 22px; color: var(--overlay0); }
+.media-widget .btn:hover { color: var(--subtext1); }
+.media-widget .btn.disabled { color: var(--surface1); }
+
+/* home */
+.home-widget { padding: 0 10px 0 10px; }
+.home-widget .icon { color: var(--green); }
+.home-widget .icon:hover { color: var(--text); }
+.home-menu {
+  background: var(--crust); border-radius: 10px; border: 1px solid var(--stroke);
+  box-shadow: 0 12px 28px rgba(0,0,0,.32);
+}
+.home-menu .menu-item {
+  padding: 10px 18px; font: 600 12px "JetBrainsMono NFP", ui-sans-serif; color: var(--text);
+}
+.home-menu .menu-item:hover { background: rgba(146,131,116,.15); color: #fff; }
+.home-menu .separator { height: 1px; background: rgba(146,131,116,.28); }
+
+/* notifications */
+.notification-widget .icon { font-size: 14px; }
+.notification-widget .icon.new-notification { color: var(--yellow); }
+
+/* systray — a bit larger, no bg change on hover */
+.systray { gap: 6px; }
+.systray .widget { background: transparent; border: 0; box-shadow: none; padding: 0; margin: 0 6px 0 2px; 
+
+
+}
+
